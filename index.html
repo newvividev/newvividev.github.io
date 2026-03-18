@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LowSugar App</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-        iframe { width: 100%; height: 100%; border: none; }
+        /* สไตล์หน้าโหลดเบื้องต้น */
+        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; background-color: #f4f4f9; font-family: sans-serif; }
+        .container { display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column; }
+        .loader { border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 30px; height: 30px; animation: spin 2s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        iframe { width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0; }
     </style>
 </head>
 <body>
+
+    <div class="container">
+        <div class="loader"></div>
+        <p>กำลังเข้าสู่ระบบ LowSugar...</p>
+    </div>
+
     <iframe src="https://script.google.com/macros/s/AKfycbwD3fOvnTpOOLelt5usGtzpEoaAU51TcbdW2hRXna9UO90W6COYlpnhFfqdmH-swWOxVA/exec"></iframe>
+
 </body>
 </html>
